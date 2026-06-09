@@ -1,0 +1,244 @@
+{
+  "adapted_annotation_count": 5285,
+  "adapted_record_count": 2085,
+  "category_distribution": {
+    "buffer_size_contract_mismatch": 7,
+    "incorrect_size_computation": 17,
+    "invalid_initialization": 12,
+    "invalid_state_update": 17,
+    "ownership_or_lifetime_operation": 15,
+    "validation_or_guard_issue": 16
+  },
+  "drop_none_patterns": true,
+  "max_examples": 3,
+  "max_templates": 3,
+  "min_confidence": 0.0,
+  "min_support": 1,
+  "operation_distribution": {
+    "guard_check": 6,
+    "initialization": 4,
+    "length_calculation": 30,
+    "lifetime_management": 5,
+    "null_check": 24,
+    "size_to_copy": 9,
+    "state_update": 6
+  },
+  "output": "data/cve_pattern_library.v4.clean.json",
+  "pattern_count": 84,
+  "schema_version": "bugrc.cve_pattern_library_build_summary.v3",
+  "skipped_annotation_count": 693,
+  "skipped_reasons": {
+    "none_or_unknown_pattern": 601,
+    "record_without_annotations": 92
+  },
+  "source_dataset": "data/cve_root_cause_dataset.v4.json.gz",
+  "source_dataset_schema": "bugrc.cve_root_cause_dataset.v4",
+  "source_record_count": 2177,
+  "support": {
+    "max": 583,
+    "min": 1,
+    "total": 5285
+  },
+  "top_patterns": [
+    {
+      "average_confidence": 0.8531,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "guard_check",
+      "pattern_id": "validation_or_guard_issue:guard_check:1",
+      "support_count": 583
+    },
+    {
+      "average_confidence": 0.9184,
+      "category": "incorrect_size_computation",
+      "name": "incorrect size computation",
+      "operation_type": "length_calculation",
+      "pattern_id": "incorrect_size_computation:length_calculation:2",
+      "support_count": 510
+    },
+    {
+      "average_confidence": 0.9267,
+      "category": "incorrect_size_computation",
+      "name": "incorrect size computation",
+      "operation_type": "length_calculation",
+      "pattern_id": "incorrect_size_computation:length_calculation:3",
+      "support_count": 500
+    },
+    {
+      "average_confidence": 0.8843,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "guard_check",
+      "pattern_id": "validation_or_guard_issue:guard_check:4",
+      "support_count": 486
+    },
+    {
+      "average_confidence": 0.8992,
+      "category": "incorrect_size_computation",
+      "name": "incorrect size computation",
+      "operation_type": "length_calculation",
+      "pattern_id": "incorrect_size_computation:length_calculation:5",
+      "support_count": 329
+    },
+    {
+      "average_confidence": 0.8621,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "guard_check",
+      "pattern_id": "validation_or_guard_issue:guard_check:6",
+      "support_count": 251
+    },
+    {
+      "average_confidence": 0.9472,
+      "category": "incorrect_size_computation",
+      "name": "incorrect size computation",
+      "operation_type": "length_calculation",
+      "pattern_id": "incorrect_size_computation:length_calculation:7",
+      "support_count": 250
+    },
+    {
+      "average_confidence": 0.9057,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "guard_check",
+      "pattern_id": "validation_or_guard_issue:guard_check:8",
+      "support_count": 210
+    },
+    {
+      "average_confidence": 0.896,
+      "category": "invalid_state_update",
+      "name": "invalid state update",
+      "operation_type": "state_update",
+      "pattern_id": "invalid_state_update:state_update:9",
+      "support_count": 198
+    },
+    {
+      "average_confidence": 0.8627,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "length_calculation",
+      "pattern_id": "validation_or_guard_issue:length_calculation:10",
+      "support_count": 175
+    },
+    {
+      "average_confidence": 0.8746,
+      "category": "invalid_state_update",
+      "name": "invalid state update",
+      "operation_type": "state_update",
+      "pattern_id": "invalid_state_update:state_update:11",
+      "support_count": 153
+    },
+    {
+      "average_confidence": 0.8849,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "length_calculation",
+      "pattern_id": "validation_or_guard_issue:length_calculation:12",
+      "support_count": 148
+    },
+    {
+      "average_confidence": 0.8325,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "null_check",
+      "pattern_id": "validation_or_guard_issue:null_check:13",
+      "support_count": 105
+    },
+    {
+      "average_confidence": 0.8758,
+      "category": "ownership_or_lifetime_operation",
+      "name": "ownership or lifetime operation",
+      "operation_type": "lifetime_management",
+      "pattern_id": "ownership_or_lifetime_operation:lifetime_management:14",
+      "support_count": 92
+    },
+    {
+      "average_confidence": 0.8712,
+      "category": "ownership_or_lifetime_operation",
+      "name": "ownership or lifetime operation",
+      "operation_type": "lifetime_management",
+      "pattern_id": "ownership_or_lifetime_operation:lifetime_management:15",
+      "support_count": 89
+    },
+    {
+      "average_confidence": 0.9196,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "length_calculation",
+      "pattern_id": "validation_or_guard_issue:length_calculation:16",
+      "support_count": 77
+    },
+    {
+      "average_confidence": 0.8455,
+      "category": "invalid_state_update",
+      "name": "invalid state update",
+      "operation_type": "state_update",
+      "pattern_id": "invalid_state_update:state_update:17",
+      "support_count": 75
+    },
+    {
+      "average_confidence": 0.875,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "null_check",
+      "pattern_id": "validation_or_guard_issue:null_check:18",
+      "support_count": 72
+    },
+    {
+      "average_confidence": 0.8637,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "null_check",
+      "pattern_id": "validation_or_guard_issue:null_check:19",
+      "support_count": 67
+    },
+    {
+      "average_confidence": 0.9075,
+      "category": "invalid_state_update",
+      "name": "invalid state update",
+      "operation_type": "state_update",
+      "pattern_id": "invalid_state_update:state_update:20",
+      "support_count": 62
+    },
+    {
+      "average_confidence": 0.8825,
+      "category": "ownership_or_lifetime_operation",
+      "name": "ownership or lifetime operation",
+      "operation_type": "length_calculation",
+      "pattern_id": "ownership_or_lifetime_operation:length_calculation:21",
+      "support_count": 55
+    },
+    {
+      "average_confidence": 0.9313,
+      "category": "incorrect_size_computation",
+      "name": "incorrect size computation",
+      "operation_type": "length_calculation",
+      "pattern_id": "incorrect_size_computation:length_calculation:22",
+      "support_count": 54
+    },
+    {
+      "average_confidence": 0.8513,
+      "category": "validation_or_guard_issue",
+      "name": "validation or guard issue",
+      "operation_type": "length_calculation",
+      "pattern_id": "validation_or_guard_issue:length_calculation:23",
+      "support_count": 48
+    },
+    {
+      "average_confidence": 0.8852,
+      "category": "ownership_or_lifetime_operation",
+      "name": "ownership or lifetime operation",
+      "operation_type": "length_calculation",
+      "pattern_id": "ownership_or_lifetime_operation:length_calculation:24",
+      "support_count": 45
+    },
+    {
+      "average_confidence": 0.9101,
+      "category": "ownership_or_lifetime_operation",
+      "name": "ownership or lifetime operation",
+      "operation_type": "lifetime_management",
+      "pattern_id": "ownership_or_lifetime_operation:lifetime_management:25",
+      "support_count": 42
+    }
+  ]
+}

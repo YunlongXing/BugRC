@@ -178,7 +178,7 @@ Historical CVE pattern libraries can be used as weak ranking priors:
 ```bash
 bugrc analyze reproduce_openssl_sm2_case/openssl_sm2_case.json \
   --parser-backend regex \
-  --cve-pattern-library /path/to/cve_pattern_library.json \
+  --cve-pattern-library data/cve_pattern_library.v4.clean.json \
   --output-dir out/with-cve-prior
 ```
 
@@ -190,6 +190,10 @@ python3 scripts/build_cve_semantic_patterns.py \
   --output-dir out/cve-semantic \
   --min-confidence 0.45
 ```
+
+The repository also includes a compact CVE-derived artifact bundle under
+`data/`: a 2,177-record compressed root-cause dataset and an 84-pattern library
+that can be loaded directly by the CLI.
 
 ## OpenSSL SM2-Style Regression Example
 
