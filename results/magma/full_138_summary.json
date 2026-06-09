@@ -1,0 +1,38 @@
+{
+  "record_count": 138,
+  "status_distribution": {
+    "completed": 138
+  },
+  "target_distribution": {
+    "libpng": 7,
+    "libsndfile": 18,
+    "libtiff": 14,
+    "libxml2": 17,
+    "lua": 4,
+    "openssl": 20,
+    "php": 16,
+    "poppler": 22,
+    "sqlite3": 20
+  },
+  "patch_comparison_distribution": {
+    "semantic_judged": 138
+  },
+  "semantic_verdict_distribution": {
+    "bugrc_patch_better": 16,
+    "semantically_equivalent": 108,
+    "magma_reference_better": 9,
+    "both_plausible": 3,
+    "exact_match": 1,
+    "both_incomplete": 1
+  },
+  "claim_distribution": {
+    "bugrc_blocks_better_than_magma_reference": 14,
+    "bugrc_matches_ground_truth": 117,
+    "bugrc_incomplete": 7
+  },
+  "generated_patch_is_pseudo_distribution": {
+    "False": 124,
+    "True": 14
+  },
+  "updated_at_epoch": 1780442391.3649383
+}

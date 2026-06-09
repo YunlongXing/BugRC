@@ -20,5 +20,7 @@ outputs/
 
 ARVO-Meta-main/
 magma/
+!results/magma/
+!results/magma/**
 cvelistV5/
 source-validation-repos/
