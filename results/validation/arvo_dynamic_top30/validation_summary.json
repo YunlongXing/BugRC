@@ -1,0 +1,22 @@
+{
+  "record_count": 30,
+  "status_distribution": {
+    "completed": 30
+  },
+  "conclusion_distribution": {
+    "official_reproducer_missing": 1,
+    "base_build_failed": 20,
+    "docker_skipped": 6,
+    "reproducer_inconclusive": 1,
+    "validated_official_incomplete_bugrc_fixes": 1,
+    "bugrc_build_failed": 1
+  },
+  "official_patch_applies": {
+    "False": 2,
+    "True": 28
+  },
+  "bugrc_patch_applies": {
+    "True": 18,
+    "False": 12
+  }
+}

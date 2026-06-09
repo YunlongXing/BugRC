@@ -1,0 +1,298 @@
+[
+  {
+    "dataset": "arvo",
+    "variant": "full",
+    "variant_label": "Full BugRC",
+    "records": 266,
+    "success": 266,
+    "success_rate": 1.0,
+    "completed": 266,
+    "failed": 0,
+    "claim_distribution": {},
+    "semantic_verdict_distribution": {
+      "bugrc_patch_better": 266
+    },
+    "pseudo_distribution": {
+      "False": 266
+    },
+    "summary_path": "artifact://local-path/summary.full.json"
+  },
+  {
+    "dataset": "arvo",
+    "variant": "without_causality_chain",
+    "variant_label": "w/o causality chain",
+    "records": 266,
+    "success": 257,
+    "success_rate": 0.9662,
+    "completed": 266,
+    "failed": 0,
+    "claim_distribution": {
+      "official_incomplete_bugrc_blocks": 257,
+      "official_and_bugrc_both_cut_path": 7,
+      "bugrc_better_but_needs_validation": 2
+    },
+    "semantic_verdict_distribution": {
+      "bugrc_patch_better": 241,
+      "official_patch_better": 25
+    },
+    "pseudo_distribution": {
+      "False": 240,
+      "True": 26
+    },
+    "summary_path": "artifact://local-path/summary.without_causality_chain.json"
+  },
+  {
+    "dataset": "arvo",
+    "variant": "without_cve_pattern_prior",
+    "variant_label": "w/o CVE/pattern prior",
+    "records": 266,
+    "success": 238,
+    "success_rate": 0.8947368421052632,
+    "completed": 265,
+    "failed": 1,
+    "claim_distribution": {},
+    "semantic_verdict_distribution": {
+      "bugrc_patch_better": 238,
+      "official_patch_better": 27
+    },
+    "pseudo_distribution": {},
+    "summary_path": "artifact://local-path/summary.json"
+  },
+  {
+    "dataset": "arvo",
+    "variant": "without_project_prior",
+    "variant_label": "w/o project prior",
+    "records": 266,
+    "success": 234,
+    "success_rate": 0.8796992481203008,
+    "completed": 265,
+    "failed": 1,
+    "claim_distribution": {},
+    "semantic_verdict_distribution": {
+      "bugrc_patch_better": 234,
+      "official_patch_better": 31
+    },
+    "pseudo_distribution": {},
+    "summary_path": "artifact://local-path/summary.json"
+  },
+  {
+    "dataset": "arvo",
+    "variant": "llm_only_root_cause",
+    "variant_label": "LLM-only root cause",
+    "records": 266,
+    "success": 234,
+    "success_rate": 0.8797,
+    "completed": 266,
+    "failed": 0,
+    "claim_distribution": {
+      "official_incomplete_bugrc_blocks": 234,
+      "official_and_bugrc_both_cut_path": 18,
+      "not_enough_evidence": 9,
+      "bugrc_better_but_needs_validation": 5
+    },
+    "semantic_verdict_distribution": {
+      "bugrc_patch_better": 198,
+      "official_patch_better": 67,
+      "unclear": 1
+    },
+    "pseudo_distribution": {
+      "False": 193,
+      "True": 73
+    },
+    "summary_path": "artifact://local-path/summary.llm_only_root_cause.json"
+  },
+  {
+    "dataset": "arvo",
+    "variant": "trigger_site_baseline",
+    "variant_label": "Trigger-site baseline",
+    "records": 266,
+    "success": 236,
+    "success_rate": 0.8872,
+    "completed": 266,
+    "failed": 0,
+    "claim_distribution": {
+      "official_incomplete_bugrc_blocks": 236,
+      "official_and_bugrc_both_cut_path": 10,
+      "not_enough_evidence": 16,
+      "bugrc_better_but_needs_validation": 4
+    },
+    "semantic_verdict_distribution": {
+      "bugrc_patch_better": 154,
+      "official_patch_better": 112
+    },
+    "pseudo_distribution": {
+      "False": 240,
+      "True": 26
+    },
+    "summary_path": "artifact://local-path/summary.trigger_site_baseline.json"
+  },
+  {
+    "dataset": "magma",
+    "variant": "full",
+    "variant_label": "Full BugRC",
+    "records": 138,
+    "success": 131,
+    "success_rate": 0.9493,
+    "completed": 138,
+    "failed": 0,
+    "claim_distribution": {
+      "bugrc_blocks_better_than_magma_reference": 14,
+      "bugrc_matches_ground_truth": 117,
+      "bugrc_incomplete": 7
+    },
+    "semantic_verdict_distribution": {
+      "bugrc_patch_better": 16,
+      "semantically_equivalent": 108,
+      "magma_reference_better": 9,
+      "both_plausible": 3,
+      "exact_match": 1,
+      "both_incomplete": 1
+    },
+    "pseudo_distribution": {
+      "False": 124,
+      "True": 14
+    },
+    "summary_path": "artifact://local-path/summary.full.json"
+  },
+  {
+    "dataset": "magma",
+    "variant": "without_causality_chain",
+    "variant_label": "w/o causality chain",
+    "records": 138,
+    "success": 126,
+    "success_rate": 0.913,
+    "completed": 138,
+    "failed": 0,
+    "claim_distribution": {
+      "bugrc_blocks_better_than_magma_reference": 16,
+      "bugrc_matches_ground_truth": 110,
+      "bugrc_incomplete": 11,
+      "not_enough_evidence": 1
+    },
+    "semantic_verdict_distribution": {
+      "bugrc_patch_better": 17,
+      "semantically_equivalent": 102,
+      "magma_reference_better": 15,
+      "both_plausible": 3,
+      "both_incomplete": 1
+    },
+    "pseudo_distribution": {
+      "False": 117,
+      "True": 21
+    },
+    "summary_path": "artifact://local-path/summary.without_causality_chain.json"
+  },
+  {
+    "dataset": "magma",
+    "variant": "without_cve_pattern_prior",
+    "variant_label": "w/o CVE/pattern prior",
+    "records": 138,
+    "success": 127,
+    "success_rate": 0.9202898550724637,
+    "completed": 138,
+    "failed": 0,
+    "claim_distribution": {
+      "bugrc_matches_ground_truth": 114,
+      "bugrc_incomplete": 10,
+      "bugrc_blocks_better_than_magma_reference": 13,
+      "not_enough_evidence": 1
+    },
+    "semantic_verdict_distribution": {
+      "semantically_equivalent": 108,
+      "both_plausible": 2,
+      "bugrc_patch_better": 16,
+      "magma_reference_better": 10,
+      "exact_match": 1,
+      "both_incomplete": 1
+    },
+    "pseudo_distribution": {
+      "False": 120,
+      "True": 18
+    },
+    "summary_path": "artifact://local-path/summary.json"
+  },
+  {
+    "dataset": "magma",
+    "variant": "without_project_prior",
+    "variant_label": "w/o project prior",
+    "records": 138,
+    "success": 127,
+    "success_rate": 0.9202898550724637,
+    "completed": 138,
+    "failed": 0,
+    "claim_distribution": {
+      "bugrc_matches_ground_truth": 117,
+      "bugrc_incomplete": 10,
+      "bugrc_blocks_better_than_magma_reference": 10,
+      "not_enough_evidence": 1
+    },
+    "semantic_verdict_distribution": {
+      "semantically_equivalent": 107,
+      "magma_reference_better": 12,
+      "bugrc_patch_better": 15,
+      "both_incomplete": 1,
+      "both_plausible": 2,
+      "exact_match": 1
+    },
+    "pseudo_distribution": {
+      "False": 120,
+      "True": 18
+    },
+    "summary_path": "artifact://local-path/summary.json"
+  },
+  {
+    "dataset": "magma",
+    "variant": "llm_only_root_cause",
+    "variant_label": "LLM-only root cause",
+    "records": 138,
+    "success": 119,
+    "success_rate": 0.8623,
+    "completed": 138,
+    "failed": 0,
+    "claim_distribution": {
+      "bugrc_matches_ground_truth": 115,
+      "bugrc_incomplete": 19,
+      "bugrc_blocks_better_than_magma_reference": 4
+    },
+    "semantic_verdict_distribution": {
+      "semantically_equivalent": 112,
+      "magma_reference_better": 18,
+      "both_plausible": 2,
+      "bugrc_patch_better": 5,
+      "both_incomplete": 1
+    },
+    "pseudo_distribution": {
+      "False": 103,
+      "True": 35
+    },
+    "summary_path": "artifact://local-path/summary.llm_only_root_cause.json"
+  },
+  {
+    "dataset": "magma",
+    "variant": "trigger_site_baseline",
+    "variant_label": "Trigger-site baseline",
+    "records": 138,
+    "success": 90,
+    "success_rate": 0.6522,
+    "completed": 138,
+    "failed": 0,
+    "claim_distribution": {
+      "bugrc_matches_ground_truth": 88,
+      "bugrc_incomplete": 44,
+      "not_enough_evidence": 4,
+      "bugrc_blocks_better_than_magma_reference": 2
+    },
+    "semantic_verdict_distribution": {
+      "semantically_equivalent": 85,
+      "magma_reference_better": 44,
+      "both_plausible": 6,
+      "bugrc_patch_better": 2,
+      "both_incomplete": 1
+    },
+    "pseudo_distribution": {
+      "False": 108,
+      "True": 30
+    },
+    "summary_path": "artifact://local-path/summary.trigger_site_baseline.json"
+  }
+]

@@ -1,0 +1,259 @@
+{
+  "record_count": 138,
+  "status_distribution": {
+    "completed": 138
+  },
+  "target_distribution": {
+    "libpng": 7,
+    "libsndfile": 18,
+    "libtiff": 14,
+    "libxml2": 17,
+    "lua": 4,
+    "openssl": 20,
+    "php": 16,
+    "poppler": 22,
+    "sqlite3": 20
+  },
+  "semantic_verdict_distribution": {
+    "bugrc_patch_better": 16,
+    "semantically_equivalent": 108,
+    "magma_reference_better": 9,
+    "both_plausible": 3,
+    "exact_match": 1,
+    "both_incomplete": 1
+  },
+  "claim_distribution": {
+    "bugrc_blocks_better_than_magma_reference": 14,
+    "bugrc_matches_ground_truth": 117,
+    "bugrc_incomplete": 7
+  },
+  "patch_apply_distribution": {
+    "False": 108,
+    "True": 30
+  },
+  "apply_reason_distribution": {
+    "git_apply_check_failed": 108,
+    "fuzzy_applied": 29,
+    "applied": 1
+  },
+  "apply_method_distribution": {
+    "null": 108,
+    "fuzzy_block_replace": 29,
+    "git_apply": 1
+  },
+  "diff_check_distribution": {
+    "None": 108,
+    "0": 28,
+    "2": 2
+  },
+  "generated_patch_is_pseudo_distribution": {
+    "None": 138
+  },
+  "failure_taxonomy_distribution": {
+    "malformed_or_truncated_diff": 96,
+    "context_mismatch": 12
+  },
+  "updated_at_epoch": 1780768305.650679,
+  "patch_apply_by_claim_label": {
+    "bugrc_blocks_better_than_magma_reference": {
+      "False": 10,
+      "True": 4
+    },
+    "bugrc_incomplete": {
+      "True": 4,
+      "False": 3
+    },
+    "bugrc_matches_ground_truth": {
+      "False": 95,
+      "True": 22
+    }
+  },
+  "patch_apply_by_semantic_verdict": {
+    "both_incomplete": {
+      "True": 1
+    },
+    "both_plausible": {
+      "False": 2,
+      "True": 1
+    },
+    "bugrc_patch_better": {
+      "False": 11,
+      "True": 5
+    },
+    "exact_match": {
+      "False": 1
+    },
+    "magma_reference_better": {
+      "False": 5,
+      "True": 4
+    },
+    "semantically_equivalent": {
+      "False": 89,
+      "True": 19
+    }
+  },
+  "applied_examples": [
+    {
+      "local_id": "TIF007",
+      "target": "libtiff",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "fuzzy_applied",
+      "method": "fuzzy_block_replace",
+      "changed_files": [
+        "contrib/pds/tif_pdsdirread.c"
+      ]
+    },
+    {
+      "local_id": "TIF013",
+      "target": "libtiff",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "fuzzy_applied",
+      "method": "fuzzy_block_replace",
+      "changed_files": [
+        "libtiff/tif_jbig.c"
+      ]
+    },
+    {
+      "local_id": "XML004",
+      "target": "libxml2",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "reason": "fuzzy_applied",
+      "method": "fuzzy_block_replace",
+      "changed_files": [
+        "xzlib.c"
+      ]
+    },
+    {
+      "local_id": "XML015",
+      "target": "libxml2",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "applied",
+      "method": "git_apply",
+      "changed_files": [
+        "HTMLparser.c"
+      ]
+    },
+    {
+      "local_id": "XML017",
+      "target": "libxml2",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "fuzzy_applied",
+      "method": "fuzzy_block_replace",
+      "changed_files": [
+        "parser.c"
+      ]
+    },
+    {
+      "local_id": "LUA001",
+      "target": "lua",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "fuzzy_applied",
+      "method": "fuzzy_block_replace",
+      "changed_files": [
+        "ldebug.c"
+      ]
+    },
+    {
+      "local_id": "LUA002",
+      "target": "lua",
+      "semantic_verdict": "magma_reference_better",
+      "claim_label": "bugrc_incomplete",
+      "reason": "fuzzy_applied",
+      "method": "fuzzy_block_replace",
+      "changed_files": [
+        "ldebug.c"
+      ]
+    },
+    {
+      "local_id": "SSL001",
+      "target": "openssl",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "fuzzy_applied",
+      "method": "fuzzy_block_replace",
+      "changed_files": [
+        "crypto/asn1/a_int.c"
+      ]
+    }
+  ],
+  "failed_examples": [
+    {
+      "local_id": "PNG001",
+      "target": "libpng",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "reason": "git_apply_check_failed",
+      "method": null,
+      "changed_files": null
+    },
+    {
+      "local_id": "PNG002",
+      "target": "libpng",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "git_apply_check_failed",
+      "method": null,
+      "changed_files": null
+    },
+    {
+      "local_id": "PNG003",
+      "target": "libpng",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "git_apply_check_failed",
+      "method": null,
+      "changed_files": null
+    },
+    {
+      "local_id": "PNG004",
+      "target": "libpng",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "git_apply_check_failed",
+      "method": null,
+      "changed_files": null
+    },
+    {
+      "local_id": "PNG005",
+      "target": "libpng",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "git_apply_check_failed",
+      "method": null,
+      "changed_files": null
+    },
+    {
+      "local_id": "PNG006",
+      "target": "libpng",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "git_apply_check_failed",
+      "method": null,
+      "changed_files": null
+    },
+    {
+      "local_id": "PNG007",
+      "target": "libpng",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "git_apply_check_failed",
+      "method": null,
+      "changed_files": null
+    },
+    {
+      "local_id": "SND001",
+      "target": "libsndfile",
+      "semantic_verdict": "semantically_equivalent",
+      "claim_label": "bugrc_matches_ground_truth",
+      "reason": "git_apply_check_failed",
+      "method": null,
+      "changed_files": null
+    }
+  ]
+}

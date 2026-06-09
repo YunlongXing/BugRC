@@ -1,0 +1,22 @@
+{
+  "record_count": 21,
+  "status_distribution": {
+    "completed": 21
+  },
+  "conclusion_distribution": {
+    "both_fix_reproducer": 1,
+    "official_fixes_bugrc_does_not": 3,
+    "bugrc_reproducer_missing": 3,
+    "reproducer_inconclusive": 1,
+    "bugrc_build_failed": 2,
+    "base_build_failed": 4,
+    "reproducer_did_not_trigger_base": 7
+  },
+  "official_patch_applies": {
+    "True": 21
+  },
+  "bugrc_patch_applies": {
+    "True": 15,
+    "False": 6
+  }
+}

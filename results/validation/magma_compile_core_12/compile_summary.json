@@ -1,0 +1,30 @@
+{
+  "record_count": 12,
+  "status_distribution": {
+    "completed": 12
+  },
+  "target_distribution": {
+    "libpng": 1,
+    "libtiff": 2,
+    "libxml2": 2,
+    "openssl": 2,
+    "php": 1,
+    "poppler": 2,
+    "sqlite3": 2
+  },
+  "conclusion_distribution": {
+    "base_and_bugrc_build": 11,
+    "patch_compile_failed": 1
+  },
+  "base_build_returncodes": {
+    "0": 12
+  },
+  "bugrc_build_returncodes": {
+    "0": 11,
+    "2": 1
+  },
+  "patch_apply_distribution": {
+    "True": 12
+  },
+  "updated_at_epoch": 1780789634.8549883
+}

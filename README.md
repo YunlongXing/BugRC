@@ -58,6 +58,10 @@ These numbers are intended as artifact context, not as standalone proof of
 patch correctness. BugRC reports semantic, materialization, and validation
 evidence separately.
 
+Compact sanitized result files for the Magma run, ablations, patch
+materialization, compile validation, external-baseline checks, ARVO
+high-confidence audit subset, and learned priors are included under `results/`.
+
 ## Repository Layout
 
 ```text
@@ -78,6 +82,8 @@ src/bugrc/
 scripts/            Reproduction, CVE-mining, ARVO, and Magma drivers
 examples/           JSON schema-shape inputs and output examples
 tests/              Unit tests for core components and scripts
+data/               CVE-derived root-cause dataset and pattern library
+results/            Sanitized summaries and compressed experiment results
 reproduce_openssl_sm2_case/
                     Small SM2-style regression example
 ```

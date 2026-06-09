@@ -1,0 +1,1079 @@
+{
+  "projects": {
+    "assimp": {
+      "metadata": {
+        "support_count": 9
+      },
+      "operation_types": {
+        "guard_check": 0.1111,
+        "length_calculation": 0.6667,
+        "lifetime_management": 0.2222
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.6667,
+        "ownership_or_lifetime_operation": 0.2222,
+        "validation_or_guard_issue": 0.1111
+      }
+    },
+    "bitcoin-core": {
+      "metadata": {
+        "support_count": 4
+      },
+      "operation_types": {
+        "guard_check": 0.25,
+        "initialization": 0.5,
+        "state_update": 0.25
+      },
+      "patterns": {
+        "invalid_initialization": 0.5,
+        "invalid_state_update": 0.25,
+        "validation_or_guard_issue": 0.25
+      }
+    },
+    "c-blosc2": {
+      "metadata": {
+        "support_count": 20
+      },
+      "operation_types": {
+        "guard_check": 0.1,
+        "initialization": 0.15,
+        "length_calculation": 0.65,
+        "lifetime_management": 0.05,
+        "state_update": 0.05
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.65,
+        "invalid_initialization": 0.15,
+        "invalid_state_update": 0.05,
+        "ownership_or_lifetime_operation": 0.05,
+        "validation_or_guard_issue": 0.1
+      }
+    },
+    "capstonenext": {
+      "metadata": {
+        "support_count": 6
+      },
+      "operation_types": {
+        "guard_check": 0.1667,
+        "initialization": 0.3333,
+        "length_calculation": 0.3333,
+        "state_update": 0.1667
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.3333,
+        "invalid_initialization": 0.3333,
+        "invalid_state_update": 0.1667,
+        "validation_or_guard_issue": 0.1667
+      }
+    },
+    "curl": {
+      "metadata": {
+        "support_count": 4
+      },
+      "operation_types": {
+        "guard_check": 0.5,
+        "length_calculation": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "validation_or_guard_issue": 0.5
+      }
+    },
+    "dav1d": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "envoy": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "guard_check": 1.0
+      },
+      "patterns": {
+        "validation_or_guard_issue": 1.0
+      }
+    },
+    "espeak-ng": {
+      "metadata": {
+        "support_count": 5
+      },
+      "operation_types": {
+        "guard_check": 0.2,
+        "length_calculation": 0.6,
+        "state_update": 0.2
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.6,
+        "invalid_state_update": 0.2,
+        "validation_or_guard_issue": 0.2
+      }
+    },
+    "expat": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "initialization": 1.0
+      },
+      "patterns": {
+        "invalid_initialization": 1.0
+      }
+    },
+    "ffmpeg": {
+      "metadata": {
+        "support_count": 8
+      },
+      "operation_types": {
+        "guard_check": 0.375,
+        "length_calculation": 0.5,
+        "state_update": 0.125
+      },
+      "patterns": {
+        "buffer_size_contract_mismatch": 0.125,
+        "incorrect_size_computation": 0.5,
+        "validation_or_guard_issue": 0.375
+      }
+    },
+    "file": {
+      "metadata": {
+        "support_count": 4
+      },
+      "operation_types": {
+        "guard_check": 0.5,
+        "initialization": 0.5
+      },
+      "patterns": {
+        "invalid_initialization": 0.5,
+        "validation_or_guard_issue": 0.5
+      }
+    },
+    "flac": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "state_update": 1.0
+      },
+      "patterns": {
+        "invalid_state_update": 1.0
+      }
+    },
+    "flatbuffers": {
+      "metadata": {
+        "support_count": 5
+      },
+      "operation_types": {
+        "guard_check": 0.4,
+        "initialization": 0.2,
+        "lifetime_management": 0.2,
+        "state_update": 0.2
+      },
+      "patterns": {
+        "invalid_initialization": 0.2,
+        "invalid_state_update": 0.2,
+        "ownership_or_lifetime_operation": 0.2,
+        "validation_or_guard_issue": 0.4
+      }
+    },
+    "fluent-bit": {
+      "metadata": {
+        "support_count": 16
+      },
+      "operation_types": {
+        "guard_check": 0.125,
+        "length_calculation": 0.625,
+        "lifetime_management": 0.1875,
+        "state_update": 0.0625
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.625,
+        "invalid_state_update": 0.0625,
+        "ownership_or_lifetime_operation": 0.1875,
+        "validation_or_guard_issue": 0.125
+      }
+    },
+    "freeradius-server": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "guard_check": 0.3333,
+        "length_calculation": 0.6667
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.6667,
+        "validation_or_guard_issue": 0.3333
+      }
+    },
+    "gdal": {
+      "metadata": {
+        "support_count": 7
+      },
+      "operation_types": {
+        "length_calculation": 0.4286,
+        "lifetime_management": 0.2857,
+        "state_update": 0.2857
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.4286,
+        "invalid_state_update": 0.2857,
+        "ownership_or_lifetime_operation": 0.2857
+      }
+    },
+    "gpac": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "length_calculation": 0.6667,
+        "lifetime_management": 0.3333
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.6667,
+        "ownership_or_lifetime_operation": 0.3333
+      }
+    },
+    "grpc": {
+      "metadata": {
+        "support_count": 5
+      },
+      "operation_types": {
+        "guard_check": 0.2,
+        "length_calculation": 0.2,
+        "lifetime_management": 0.2,
+        "state_update": 0.4
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.2,
+        "invalid_state_update": 0.4,
+        "ownership_or_lifetime_operation": 0.2,
+        "validation_or_guard_issue": 0.2
+      }
+    },
+    "harfbuzz": {
+      "metadata": {
+        "support_count": 10
+      },
+      "operation_types": {
+        "guard_check": 0.4,
+        "length_calculation": 0.5,
+        "state_update": 0.1
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "invalid_state_update": 0.1,
+        "validation_or_guard_issue": 0.4
+      }
+    },
+    "hdf5": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "htslib": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "guard_check": 0.3333,
+        "initialization": 0.3333,
+        "length_calculation": 0.3333
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.3333,
+        "invalid_initialization": 0.3333,
+        "validation_or_guard_issue": 0.3333
+      }
+    },
+    "hunspell": {
+      "metadata": {
+        "support_count": 4
+      },
+      "operation_types": {
+        "length_calculation": 0.5,
+        "lifetime_management": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "ownership_or_lifetime_operation": 0.5
+      }
+    },
+    "icu": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "length_calculation": 0.6667,
+        "lifetime_management": 0.3333
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.6667,
+        "ownership_or_lifetime_operation": 0.3333
+      }
+    },
+    "imagemagick": {
+      "metadata": {
+        "support_count": 33
+      },
+      "operation_types": {
+        "guard_check": 0.2727,
+        "initialization": 0.3939,
+        "length_calculation": 0.2727,
+        "lifetime_management": 0.0606
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.2727,
+        "invalid_initialization": 0.3939,
+        "ownership_or_lifetime_operation": 0.0606,
+        "validation_or_guard_issue": 0.2727
+      }
+    },
+    "kimageformats": {
+      "metadata": {
+        "support_count": 9
+      },
+      "operation_types": {
+        "initialization": 0.6667,
+        "length_calculation": 0.1111,
+        "lifetime_management": 0.2222
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.1111,
+        "invalid_initialization": 0.6667,
+        "ownership_or_lifetime_operation": 0.2222
+      }
+    },
+    "krb5": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 0.5,
+        "state_update": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "invalid_state_update": 0.5
+      }
+    },
+    "lcms": {
+      "metadata": {
+        "support_count": 6
+      },
+      "operation_types": {
+        "guard_check": 0.3333,
+        "initialization": 0.1667,
+        "length_calculation": 0.1667,
+        "lifetime_management": 0.1667,
+        "state_update": 0.1667
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.1667,
+        "invalid_initialization": 0.1667,
+        "invalid_state_update": 0.1667,
+        "ownership_or_lifetime_operation": 0.1667,
+        "validation_or_guard_issue": 0.3333
+      }
+    },
+    "leptonica": {
+      "metadata": {
+        "support_count": 6
+      },
+      "operation_types": {
+        "initialization": 0.1667,
+        "length_calculation": 0.6667,
+        "lifetime_management": 0.1667
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.6667,
+        "invalid_initialization": 0.1667,
+        "ownership_or_lifetime_operation": 0.1667
+      }
+    },
+    "libarchive": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "state_update": 1.0
+      },
+      "patterns": {
+        "invalid_state_update": 1.0
+      }
+    },
+    "libavc": {
+      "metadata": {
+        "support_count": 8
+      },
+      "operation_types": {
+        "guard_check": 0.25,
+        "length_calculation": 0.625,
+        "lifetime_management": 0.125
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.625,
+        "ownership_or_lifetime_operation": 0.125,
+        "validation_or_guard_issue": 0.25
+      }
+    },
+    "libdwarf": {
+      "metadata": {
+        "support_count": 4
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "libexif": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 0.5,
+        "state_update": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "invalid_state_update": 0.5
+      }
+    },
+    "libheif": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "guard_check": 0.5,
+        "initialization": 0.5
+      },
+      "patterns": {
+        "invalid_initialization": 0.5,
+        "validation_or_guard_issue": 0.5
+      }
+    },
+    "libhevc": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "guard_check": 0.6667,
+        "length_calculation": 0.3333
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.3333,
+        "validation_or_guard_issue": 0.6667
+      }
+    },
+    "libjpeg-turbo.main": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "initialization": 0.5,
+        "length_calculation": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "invalid_initialization": 0.5
+      }
+    },
+    "libplist": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "libraw": {
+      "metadata": {
+        "support_count": 19
+      },
+      "operation_types": {
+        "guard_check": 0.0526,
+        "initialization": 0.4737,
+        "length_calculation": 0.4737
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.4737,
+        "invalid_initialization": 0.4737,
+        "validation_or_guard_issue": 0.0526
+      }
+    },
+    "librawspeed": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "initialization": 0.5,
+        "length_calculation": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "invalid_initialization": 0.5
+      }
+    },
+    "libredwg": {
+      "metadata": {
+        "support_count": 9
+      },
+      "operation_types": {
+        "length_calculation": 0.5556,
+        "lifetime_management": 0.4444
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5556,
+        "ownership_or_lifetime_operation": 0.4444
+      }
+    },
+    "libtiff": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "guard_check": 0.5,
+        "initialization": 0.5
+      },
+      "patterns": {
+        "invalid_initialization": 0.5,
+        "validation_or_guard_issue": 0.5
+      }
+    },
+    "libvips": {
+      "metadata": {
+        "support_count": 9
+      },
+      "operation_types": {
+        "guard_check": 0.1111,
+        "initialization": 0.1111,
+        "length_calculation": 0.6667,
+        "lifetime_management": 0.1111
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.6667,
+        "invalid_initialization": 0.1111,
+        "ownership_or_lifetime_operation": 0.1111,
+        "validation_or_guard_issue": 0.1111
+      }
+    },
+    "libvpx": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "initialization": 1.0
+      },
+      "patterns": {
+        "invalid_initialization": 1.0
+      }
+    },
+    "libxml2": {
+      "metadata": {
+        "support_count": 9
+      },
+      "operation_types": {
+        "guard_check": 0.1111,
+        "initialization": 0.1111,
+        "length_calculation": 0.3333,
+        "lifetime_management": 0.3333,
+        "state_update": 0.1111
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.3333,
+        "invalid_initialization": 0.1111,
+        "invalid_state_update": 0.1111,
+        "ownership_or_lifetime_operation": 0.3333,
+        "validation_or_guard_issue": 0.1111
+      }
+    },
+    "libxslt": {
+      "metadata": {
+        "support_count": 5
+      },
+      "operation_types": {
+        "guard_check": 0.2,
+        "initialization": 0.6,
+        "state_update": 0.2
+      },
+      "patterns": {
+        "invalid_initialization": 0.6,
+        "invalid_state_update": 0.2,
+        "validation_or_guard_issue": 0.2
+      }
+    },
+    "llvm-project": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "lifetime_management": 1.0
+      },
+      "patterns": {
+        "ownership_or_lifetime_operation": 1.0
+      }
+    },
+    "matio": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "md4c": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "mdbtools": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "mruby": {
+      "metadata": {
+        "support_count": 16
+      },
+      "operation_types": {
+        "guard_check": 0.125,
+        "initialization": 0.25,
+        "length_calculation": 0.3125,
+        "lifetime_management": 0.0625,
+        "state_update": 0.25
+      },
+      "patterns": {
+        "buffer_size_contract_mismatch": 0.1875,
+        "incorrect_size_computation": 0.3125,
+        "invalid_initialization": 0.25,
+        "invalid_state_update": 0.0625,
+        "ownership_or_lifetime_operation": 0.0625,
+        "validation_or_guard_issue": 0.125
+      }
+    },
+    "ndpi": {
+      "metadata": {
+        "support_count": 22
+      },
+      "operation_types": {
+        "guard_check": 0.1818,
+        "initialization": 0.2727,
+        "length_calculation": 0.3182,
+        "lifetime_management": 0.0455,
+        "state_update": 0.1818
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.3182,
+        "invalid_initialization": 0.2727,
+        "invalid_state_update": 0.1818,
+        "ownership_or_lifetime_operation": 0.0455,
+        "validation_or_guard_issue": 0.1818
+      }
+    },
+    "net-snmp": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 0.5,
+        "state_update": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "invalid_state_update": 0.5
+      }
+    },
+    "ntopng": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "oniguruma": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "guard_check": 0.3333,
+        "length_calculation": 0.6667
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.6667,
+        "validation_or_guard_issue": 0.3333
+      }
+    },
+    "open62541": {
+      "metadata": {
+        "support_count": 11
+      },
+      "operation_types": {
+        "guard_check": 0.3636,
+        "initialization": 0.1818,
+        "length_calculation": 0.2727,
+        "lifetime_management": 0.1818
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.2727,
+        "invalid_initialization": 0.1818,
+        "ownership_or_lifetime_operation": 0.1818,
+        "validation_or_guard_issue": 0.3636
+      }
+    },
+    "opensc": {
+      "metadata": {
+        "support_count": 7
+      },
+      "operation_types": {
+        "guard_check": 0.1429,
+        "length_calculation": 0.8571
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.8571,
+        "validation_or_guard_issue": 0.1429
+      }
+    },
+    "pcre2": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "lifetime_management": 0.5,
+        "state_update": 0.5
+      },
+      "patterns": {
+        "invalid_state_update": 0.5,
+        "ownership_or_lifetime_operation": 0.5
+      }
+    },
+    "php-src": {
+      "metadata": {
+        "support_count": 13
+      },
+      "operation_types": {
+        "length_calculation": 0.3846,
+        "lifetime_management": 0.6154
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.3846,
+        "ownership_or_lifetime_operation": 0.6154
+      }
+    },
+    "poppler": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "initialization": 0.5,
+        "length_calculation": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "invalid_initialization": 0.5
+      }
+    },
+    "qemu": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "lifetime_management": 1.0
+      },
+      "patterns": {
+        "ownership_or_lifetime_operation": 1.0
+      }
+    },
+    "readstat": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 0.5,
+        "lifetime_management": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "ownership_or_lifetime_operation": 0.5
+      }
+    },
+    "samba": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "length_calculation": 0.6667,
+        "state_update": 0.3333
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.6667,
+        "invalid_state_update": 0.3333
+      }
+    },
+    "selinux": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "guard_check": 0.5,
+        "initialization": 0.5
+      },
+      "patterns": {
+        "invalid_initialization": 0.5,
+        "validation_or_guard_issue": 0.5
+      }
+    },
+    "serenity": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "lifetime_management": 1.0
+      },
+      "patterns": {
+        "ownership_or_lifetime_operation": 1.0
+      }
+    },
+    "simdjson": {
+      "metadata": {
+        "support_count": 4
+      },
+      "operation_types": {
+        "initialization": 1.0
+      },
+      "patterns": {
+        "invalid_initialization": 1.0
+      }
+    },
+    "skia": {
+      "metadata": {
+        "support_count": 11
+      },
+      "operation_types": {
+        "guard_check": 0.2727,
+        "initialization": 0.0909,
+        "length_calculation": 0.3636,
+        "lifetime_management": 0.2727
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.3636,
+        "invalid_initialization": 0.0909,
+        "ownership_or_lifetime_operation": 0.2727,
+        "validation_or_guard_issue": 0.2727
+      }
+    },
+    "sleuthkit": {
+      "metadata": {
+        "support_count": 9
+      },
+      "operation_types": {
+        "guard_check": 0.4444,
+        "length_calculation": 0.3333,
+        "lifetime_management": 0.1111,
+        "state_update": 0.1111
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.3333,
+        "invalid_state_update": 0.1111,
+        "ownership_or_lifetime_operation": 0.1111,
+        "validation_or_guard_issue": 0.4444
+      }
+    },
+    "systemd": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 0.5,
+        "lifetime_management": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "ownership_or_lifetime_operation": 0.5
+      }
+    },
+    "tarantool": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "tint": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "initialization": 1.0
+      },
+      "patterns": {
+        "invalid_initialization": 1.0
+      }
+    },
+    "unrar": {
+      "metadata": {
+        "support_count": 8
+      },
+      "operation_types": {
+        "guard_check": 0.375,
+        "initialization": 0.25,
+        "length_calculation": 0.25,
+        "state_update": 0.125
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.25,
+        "invalid_initialization": 0.25,
+        "invalid_state_update": 0.125,
+        "validation_or_guard_issue": 0.375
+      }
+    },
+    "usrsctp": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "initialization": 0.5,
+        "length_calculation": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "invalid_initialization": 0.5
+      }
+    },
+    "vlc": {
+      "metadata": {
+        "support_count": 2
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "wasm3": {
+      "metadata": {
+        "support_count": 10
+      },
+      "operation_types": {
+        "guard_check": 0.1,
+        "length_calculation": 0.9
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.9,
+        "validation_or_guard_issue": 0.1
+      }
+    },
+    "wget2": {
+      "metadata": {
+        "support_count": 3
+      },
+      "operation_types": {
+        "length_calculation": 1.0
+      },
+      "patterns": {
+        "incorrect_size_computation": 1.0
+      }
+    },
+    "wireshark": {
+      "metadata": {
+        "support_count": 16
+      },
+      "operation_types": {
+        "initialization": 0.0625,
+        "length_calculation": 0.9375
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.9375,
+        "invalid_initialization": 0.0625
+      }
+    },
+    "wolfmqtt": {
+      "metadata": {
+        "support_count": 10
+      },
+      "operation_types": {
+        "length_calculation": 0.5,
+        "lifetime_management": 0.5
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.5,
+        "ownership_or_lifetime_operation": 0.5
+      }
+    },
+    "wolfssl": {
+      "metadata": {
+        "support_count": 19
+      },
+      "operation_types": {
+        "guard_check": 0.2105,
+        "initialization": 0.3158,
+        "length_calculation": 0.3684,
+        "lifetime_management": 0.1053
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.3684,
+        "invalid_initialization": 0.3158,
+        "ownership_or_lifetime_operation": 0.1053,
+        "validation_or_guard_issue": 0.2105
+      }
+    },
+    "yara": {
+      "metadata": {
+        "support_count": 5
+      },
+      "operation_types": {
+        "guard_check": 0.2,
+        "initialization": 0.4,
+        "length_calculation": 0.2,
+        "lifetime_management": 0.2
+      },
+      "patterns": {
+        "incorrect_size_computation": 0.2,
+        "invalid_initialization": 0.4,
+        "ownership_or_lifetime_operation": 0.2,
+        "validation_or_guard_issue": 0.2
+      }
+    }
+  }
+}

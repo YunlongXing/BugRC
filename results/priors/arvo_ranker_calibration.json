@@ -1,0 +1,32 @@
+{
+  "contribution_weights": {
+    "cve_pattern_prior": 0.14,
+    "project_prior": 0.1
+  },
+  "feature_boosts": {
+    "affects_control_flow": 0.06,
+    "changes_object_state": 0.06,
+    "defines_value_used_later": 0.06,
+    "has_integer_influence": 0.06,
+    "has_memory_context": 0.06
+  },
+  "metadata": {
+    "purpose": "Weakly calibrate ranking toward patterns repeatedly accepted by strict semantic review.",
+    "record_count": 528,
+    "source": "ARVO curated BugRC-better cases"
+  },
+  "pattern_boosts": {
+    "buffer_size_contract_mismatch": 0.0076,
+    "incorrect_size_computation": 0.08,
+    "invalid_initialization": 0.08,
+    "invalid_state_update": 0.0644,
+    "ownership_or_lifetime_operation": 0.08,
+    "validation_or_guard_issue": 0.08
+  },
+  "penalty_weights": {
+    "pure_use_site": 0.22,
+    "trigger_symptom": 0.36
+  },
+  "root_cause_threshold": 0.58,
+  "symptom_threshold": 0.2
+}

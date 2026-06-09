@@ -1,0 +1,44 @@
+{
+  "subset_size": 18,
+  "vulrepair_function_inputs": 18,
+  "vulrepair": {
+    "baseline": "VulRepair",
+    "status": "completed",
+    "model": "MickyMike/VulRepair",
+    "num_beams": 5,
+    "dependency_check_output": "artifact://local-path/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.\n  _torch_pytree._register_pytree_node(\n2.12.0+cpu\n4.36.2\n",
+    "returncode": 0,
+    "elapsed_seconds": 46.068,
+    "log_tail": "artifact://local-path/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.\n  _torch_pytree._register_pytree_node(\nartifact://local-path/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.\n  _torch_pytree._register_pytree_node(\nartifact://local-path/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.\n  _torch_pytree._register_pytree_node(\nartifact://local-path/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.\n  warnings.warn(\nSpecial tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.\n",
+    "predictions_path": "artifact://local-path/vulrepair_predictions.jsonl",
+    "prediction_count": 18
+  },
+  "vulrepair_prediction_quality": {
+    "prediction_count": 18,
+    "nonempty_predictions": 18,
+    "s2sv_encoded_predictions": 18,
+    "code_like_predictions": 8,
+    "directly_applicable_unified_diffs": 0,
+    "direct_project_patch_rate": 0.0,
+    "interpretation": "VulRepair completed function-level inference, but its artifact emits S2SV edit-script predictions. These are not directly applicable project-level patches without the original dataset-specific de-preprocessing and patch reconstruction step."
+  },
+  "cpr_extractfix": {
+    "baseline": "CPR/ExtractFix",
+    "docker_available": true,
+    "docker_path": "/usr/bin/docker",
+    "image": "rshariffdeen/cpr:experiments-cpr",
+    "status": "compatibility_assessed",
+    "docker_image_present": true,
+    "docker_image_inspect_tail": "                \"sha256:7c54d129cba4be535964ef3be6aee87059c23c0631404b2f89652310754b6af6\",\n                \"sha256:7555a6620331ca0bdbcd5e5e2b3ee02887757a254dc8293e1a6677c7a3f70125\",\n                \"sha256:0906c8f0aa9abf42649dcbf68e863bb0854bf72dc5933fdbde80ebdf067d3016\",\n                \"sha256:afa8db31a351c4c5a1cfb8aeb90a96b84f1c972f5ec74d0bfa782d6f82f3e975\",\n                \"sha256:ec8651d337c4967476a5f08aa526455a48d9f4a4b97e7b3d8751c1de65b050fe\",\n                \"sha256:b8a42fcbf85146cc35f0d54691542ac4398833bee3452b5204dc8c7e54ba1960\",\n                \"sha256:cf9dfa1ff36d7bfffa5691bdbb916511c30728a31ed205a0f2f6c8907e0ff189\",\n                \"sha256:b1693174c81b691433e1faa27227f769b09f0b289154dbda11f17e9a662fc3b6\",\n                \"sha256:39e3569233f5ac55037de248f59aa89e7fe0d268b479e874fd71e84c4e068175\",\n                \"sha256:5d5cf7c0086dac59d29db2161e2b59b7ba8121411e073dfaebb54c109d691968\",\n                \"sha256:68ef50710c9d1ee6630e998778060808c111155610f33fec8e034c2d33526b92\",\n                \"sha256:c4a87a8f00b57f4f5d3730f76ace7ddc13cf71074d3db322a50ecbcf29063ab6\",\n                \"sha256:c7ff45b86f3e1c55ca95814857cad484f4f490668390ab842e1224952a8bd308\",\n                \"sha256:bba1b15eccfe45469f13441cc2ebbf506df7cc8fec139afb71eb8593e666bbf9\",\n                \"sha256:e538acb3193fb34a249017c8dd775522dd0790e8d301351857a1f14069e8b262\",\n                \"sha256:591c14d7e3788a7d9ba12f1c3b97ee4cf65741841576361bd9fd2b51139d5341\",\n                \"sha256:d4915e13f3c6c49f416611138e2332833f29e320d60d70325f518eceaa261055\",\n                \"sha256:498d1ade56b8f40c8e779302fa526619061e69d67c9a5d5cf5b1f7fad3cb4cf6\",\n                \"sha256:f58e8b9569636c6c43b2b482a33bae8056cd46e4de66173c0fd9e6cabd83485d\",\n                \"sha256:f2efe6f36a25fcfb8cfcfeaa7b4a76427165465c75ed717a906490ddef94ea0c\",\n                \"sha256:2f9ece542a02a31e5f2550d43b2711f21baa1b27dfbe51723ee7c83fb1d8f1ba\"\n            ],\n            \"Type\": \"layers\"\n        },\n        \"Size\": 6564490105\n    }\n]\n",
+    "applicability_distribution": {
+      "not_applicable_without_custom_harness": 18
+    }
+  },
+  "outputs": {
+    "subset_cases": "artifact://local-path/subset_cases.json",
+    "vulrepair_inputs_jsonl": "artifact://local-path/vulrepair_inputs.jsonl",
+    "vulrepair_inputs_csv": "artifact://local-path/vulrepair_inputs.csv",
+    "cpr_extractfix_applicability": "artifact://local-path/cpr_extractfix_applicability.json",
+    "vulrepair_predictions": "artifact://local-path/vulrepair_predictions.jsonl"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "count": 12,
+  "cases": [
+    {
+      "local_id": "PNG001",
+      "bug_id": "PNG001",
+      "target": "libpng",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "semantic_guard_insertion",
+      "materialization_reason": "refined_guard_insertion",
+      "materialized_changed_files": [
+        "pngrutil.c"
+      ]
+    },
+    {
+      "local_id": "TIF002",
+      "bug_id": "TIF002",
+      "target": "libtiff",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "semantic_guard_insertion",
+      "materialization_reason": "refined_guard_insertion",
+      "materialized_changed_files": [
+        "libtiff/tif_pixarlog.c"
+      ]
+    },
+    {
+      "local_id": "TIF010",
+      "bug_id": "TIF010",
+      "target": "libtiff",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "semantic_guard_insertion",
+      "materialization_reason": "refined_guard_insertion",
+      "materialized_changed_files": [
+        "libtiff/tif_lzw.c"
+      ]
+    },
+    {
+      "local_id": "XML003",
+      "bug_id": "XML003",
+      "target": "libxml2",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "semantic_guard_insertion",
+      "materialization_reason": "refined_guard_insertion",
+      "materialized_changed_files": [
+        "parser.c"
+      ]
+    },
+    {
+      "local_id": "XML004",
+      "bug_id": "XML004",
+      "target": "libxml2",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "fuzzy_block_replace",
+      "materialization_reason": "fuzzy_applied",
+      "materialized_changed_files": [
+        "xzlib.c"
+      ]
+    },
+    {
+      "local_id": "SSL016",
+      "bug_id": "SSL016",
+      "target": "openssl",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "fuzzy_block_replace",
+      "materialization_reason": "fuzzy_applied",
+      "materialized_changed_files": [
+        "crypto/bn/bn_gf2m.c"
+      ]
+    },
+    {
+      "local_id": "SSL019",
+      "bug_id": "SSL019",
+      "target": "openssl",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "semantic_guard_insertion",
+      "materialization_reason": "refined_guard_insertion",
+      "materialized_changed_files": [
+        "ssl/record/rec_layer_s3.c"
+      ]
+    },
+    {
+      "local_id": "PHP005",
+      "bug_id": "PHP005",
+      "target": "php",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "fuzzy_block_replace",
+      "materialization_reason": "fuzzy_applied",
+      "materialized_changed_files": [
+        "ext/iconv/iconv.c"
+      ]
+    },
+    {
+      "local_id": "PDF002",
+      "bug_id": "PDF002",
+      "target": "poppler",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "semantic_guard_insertion",
+      "materialization_reason": "refined_guard_insertion",
+      "materialized_changed_files": [
+        "poppler/JPEG2000Stream.cc"
+      ]
+    },
+    {
+      "local_id": "PDF014",
+      "bug_id": "PDF014",
+      "target": "poppler",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "fuzzy_block_replace",
+      "materialization_reason": "fuzzy_applied",
+      "materialized_changed_files": [
+        "poppler/XRef.cc"
+      ]
+    },
+    {
+      "local_id": "SQL008",
+      "bug_id": "SQL008",
+      "target": "sqlite3",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "semantic_guard_insertion",
+      "materialization_reason": "refined_guard_insertion",
+      "materialized_changed_files": [
+        "ext/misc/dbdump.c"
+      ]
+    },
+    {
+      "local_id": "SQL018",
+      "bug_id": "SQL018",
+      "target": "sqlite3",
+      "semantic_verdict": "bugrc_patch_better",
+      "claim_label": "bugrc_blocks_better_than_magma_reference",
+      "materialization_method": "semantic_guard_insertion",
+      "materialization_reason": "refined_guard_insertion",
+      "materialized_changed_files": [
+        "src/expr.c"
+      ]
+    }
+  ]
+}

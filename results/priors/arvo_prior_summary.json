@@ -1,0 +1,19 @@
+{
+  "global_features": {
+    "affects_control_flow": 84,
+    "changes_object_state": 66,
+    "defines_value_used_later": 340,
+    "has_integer_influence": 241,
+    "has_memory_context": 66
+  },
+  "global_patterns": {
+    "buffer_size_contract_mismatch": 4,
+    "incorrect_size_computation": 241,
+    "invalid_initialization": 99,
+    "invalid_state_update": 34,
+    "ownership_or_lifetime_operation": 66,
+    "validation_or_guard_issue": 84
+  },
+  "project_count": 78,
+  "record_count": 528
+}
