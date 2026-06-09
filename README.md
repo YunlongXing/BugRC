@@ -110,7 +110,7 @@ Optional:
 ## Installation
 
 ```bash
-git clone https://github.com/YunlongXing/BugRC.git
+git clone https://github.com/XXX/BugRC.git
 cd BugRC
 python3 -m venv .venv
 source .venv/bin/activate
