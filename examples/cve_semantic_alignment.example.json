@@ -1,0 +1,46 @@
+{
+  "cve_id": "CVE-2026-1111",
+  "alignments": [
+    {
+      "candidate_rank": 1,
+      "location": {
+        "file": "src/parser.c",
+        "line": 2,
+        "function": "parse_size"
+      },
+      "heuristic_label": "propagation",
+      "label": "root_cause_candidate",
+      "confidence": 0.89,
+      "reasoning": "The CVE describes an oversized payload length, and this statement computes the incorrect length later used by memcpy.",
+      "candidate_origin": "upstream_slice",
+      "llm_judgment": {
+        "task": "cve_candidate_semantic_alignment",
+        "provider": "openai_compatible",
+        "model": "gpt-5-mini",
+        "verdict": "root_cause_candidate",
+        "rationale": "The CVE description points to a payload-length miscalculation, and this candidate introduces that incorrect state before the copy.",
+        "confidence": {
+          "value": 0.89,
+          "method": "llm_confidence_calibration_v1"
+        }
+      },
+      "metadata": {
+        "candidate_score": 0.74,
+        "parser_backend": "regex",
+        "matched_bug_pattern": "incorrect_size_computation",
+        "used_patch_context": true
+      }
+    }
+  ],
+  "diagnostics": [
+    "Function context may be truncated for large functions.",
+    "Patch context is reconstructed from structured hunks when raw diff text is unavailable."
+  ],
+  "metadata": {
+    "parser_backend": "regex",
+    "parsed_file_count": 1,
+    "candidate_count": 1,
+    "used_patch_context": true,
+    "repo_path": "/tmp/demo-parser"
+  }
+}

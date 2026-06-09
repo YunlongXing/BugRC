@@ -1,0 +1,52 @@
+{
+  "records": [
+    {
+      "cve_id": "CVE-2026-1111",
+      "project": "demo-parser",
+      "repo_url": "https://github.com/example/demo-parser",
+      "root_causes": [
+        {
+          "rank": 1,
+          "location": {
+            "file": "src/parser.c",
+            "line": 2,
+            "function": "parse_size"
+          },
+          "code_snippet": "1: int parse_size(const unsigned char *input) {\n2:     int payload_len = input[0] + 8;\n3:     return payload_len;",
+          "type": "incorrect_size_computation",
+          "classification": "root_cause_candidate",
+          "pattern": "incorrect_size_computation",
+          "explanation": "The CVE text describes an oversized payload length, and this statement computes that invalid length before memcpy.",
+          "confidence": 0.91,
+          "patch_relation": "patched_statement",
+          "candidate_rank": 1,
+          "candidate_origin": "upstream_slice",
+          "metadata": {
+            "heuristic_label": "root_cause_candidate",
+            "heuristic_score": 0.74,
+            "semantic_label": "root_cause_candidate",
+            "semantic_confidence": 0.91,
+            "matched_bug_pattern": "incorrect_size_computation"
+          }
+        }
+      ],
+      "diagnostics": [
+        "Filtered out 1 non-root-cause candidates."
+      ],
+      "metadata": {
+        "threshold": 0.7,
+        "retained_root_causes": 1,
+        "candidate_count": 2,
+        "used_semantic_alignment": true,
+        "used_patch_context": true
+      }
+    }
+  ],
+  "metadata": {
+    "record_count": 1,
+    "discarded_records": 0,
+    "min_confidence": 0.7,
+    "top_k": 3,
+    "drop_empty": true
+  }
+}

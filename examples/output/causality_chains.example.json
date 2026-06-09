@@ -1,0 +1,40 @@
+[
+  {
+    "rank": 1,
+    "root_cause_rank": 1,
+    "score": 0.89,
+    "steps": [
+      {
+        "location": {
+          "file": "src/parser.c",
+          "line": 145,
+          "function": "parse_header"
+        },
+        "relation": "state_update",
+        "entity": "len",
+        "explanation": "An invalid length is computed from unvalidated input."
+      },
+      {
+        "location": {
+          "file": "src/core.c",
+          "line": 218,
+          "function": "handle_msg"
+        },
+        "relation": "call_argument",
+        "entity": "len",
+        "explanation": "The faulty length is passed into the downstream handler."
+      },
+      {
+        "location": {
+          "file": "src/foo.c",
+          "line": 312,
+          "function": "process_input"
+        },
+        "relation": "data_flow",
+        "entity": "memcpy_size",
+        "explanation": "The same length is used as a memcpy size, making the bug observable."
+      }
+    ],
+    "summary": "A wrong length computed in parse_header propagates through handle_msg and becomes the memcpy size at the trigger point."
+  }
+]

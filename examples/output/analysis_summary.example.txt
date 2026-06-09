@@ -1,0 +1,16 @@
+BugRC analysis for libfoo_2026_001
+Trigger: src/foo.c:312 in process_input [asan_report] op=memcpy
+Summary: Top candidate #1 at src/parser.c:145 flows to the trigger through chain #1: A wrong length computed in parse_header propagates through handle_msg and becomes the memcpy size at the trigger point.
+
+Top candidates:
+  #1 src/parser.c:145 (root_cause_candidate, score=0.91) in parse_header
+    This upstream statement introduces a faulty size value later used by the trigger operation.
+  #2 src/core.c:218 (propagation, score=0.72) in handle_msg
+    This statement forwards the already-invalid size into the downstream handler.
+
+Top chains:
+  Chain 1 (root candidate #1, score 0.89)
+  1. src/parser.c:145 in parse_header | assignment | state_update [len]: An invalid length is computed from unvalidated input.
+  2. src/core.c:218 in handle_msg | function_call | call_argument [len]: The faulty length is passed into the downstream handler.
+  3. src/foo.c:312 in process_input | memory_operation | data_flow [memcpy_size]: The same length is used as a memcpy size, making the bug observable.
+  Summary: A wrong length computed in parse_header propagates through handle_msg and becomes the memcpy size at the trigger point.

@@ -1,0 +1,53 @@
+{
+  "anchors": [
+    {
+      "anchor_id": "src/sample.c:0:8:insertion_site",
+      "anchor_kind": "insertion_site",
+      "anchor_text": "int actual = compute_size(len);",
+      "changed_function": "copy_data",
+      "file": "src/sample.c",
+      "hunk_index": 0,
+      "location": {
+        "file": "src/sample.c",
+        "function": "copy_data",
+        "line": 8
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "explanation": "This upstream statement introduces or updates size and matches the incorrect_size_computation heuristic. This statement participates in a computation that the patch likely corrects.",
+      "features": {
+        "candidate_origin": "upstream_candidate",
+        "defines_value_later_fixed": true,
+        "incorrect_computation_replaced_by_patch": true,
+        "patch_anchor_overlap": false
+      },
+      "label": "root_cause_candidate",
+      "location": {
+        "file": "src/sample.c",
+        "function": "compute_size",
+        "line": 3
+      },
+      "rank": 1,
+      "score": 0.79
+    },
+    {
+      "explanation": "This location is close to the observable failure and mostly consumes already-propagated state. This location is directly modified by the fix and is kept as a patch anchor.",
+      "features": {
+        "candidate_origin": "patch_location",
+        "patch_anchor_overlap": true
+      },
+      "label": "symptom",
+      "location": {
+        "file": "src/sample.c",
+        "function": "copy_data",
+        "line": 8
+      },
+      "rank": 2,
+      "score": 0.41
+    }
+  ],
+  "cve_id": "CVE-2024-4000",
+  "repo_path": "/path/to/vulnerable/tree"
+}

@@ -1,0 +1,75 @@
+{
+  "patterns": [
+    {
+      "pattern_id": "incorrect_size_computation:length_calculation:1",
+      "name": "incorrect size computation",
+      "category": "incorrect_size_computation",
+      "operation_type": "length_calculation",
+      "support_count": 2,
+      "cve_ids": [
+        "CVE-2026-1001",
+        "CVE-2026-1002"
+      ],
+      "templates": [
+        {
+          "template": "int <size_var> = <var1>[<int>] + <int>;",
+          "support_count": 1
+        },
+        {
+          "template": "size_t <size_var> = <size_var> + <int>;",
+          "support_count": 1
+        }
+      ],
+      "graph_pattern": {
+        "signature": "data_dependence -> call_argument",
+        "entry_relations": [
+          "data_dependence"
+        ],
+        "path_relations": [
+          "data_dependence",
+          "call_argument"
+        ]
+      },
+      "feature_rules": [
+        {
+          "feature": "patch_relation",
+          "operator": "equals",
+          "value": "patched_statement",
+          "support": 1.0
+        },
+        {
+          "feature": "candidate_origin",
+          "operator": "equals",
+          "value": "upstream_slice",
+          "support": 1.0
+        }
+      ],
+      "examples": [
+        {
+          "cve_id": "CVE-2026-1001",
+          "location": {
+            "file": "src/a.c",
+            "line": 10,
+            "function": "parse"
+          },
+          "code_snippet": "10: int payload_len = input[0] + 8;",
+          "confidence": 0.93,
+          "abstract_template": "int <size_var> = <var1>[<int>] + <int>;",
+          "patch_relation": "patched_statement"
+        }
+      ],
+      "metadata": {
+        "average_confidence": 0.905,
+        "patch_relations": [
+          "patched_statement"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "input_record_count": 2,
+    "observation_count": 2,
+    "pattern_count": 1,
+    "min_support": 2
+  }
+}

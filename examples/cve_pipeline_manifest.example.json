@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "source_kind": "project_advisory",
+      "locator": "examples/cve_project_advisory.example.json"
+    }
+  ],
+  "repo_paths": {
+    "https://gitlab.com/example/minihttpd": "/absolute/path/to/vulnerable/minihttpd",
+    "minihttpd": "/absolute/path/to/vulnerable/minihttpd"
+  },
+  "language_hints": {
+    "https://gitlab.com/example/minihttpd": "c"
+  },
+  "keep_unknown_language": false
+}

@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "affected_versions": [
+        {
+          "first_patched_version": "1.3.0",
+          "package": "minihttpd",
+          "vulnerable_version_range": "< 1.3.0"
+        }
+      ],
+      "cve_id": "CVE-2024-2000",
+      "cwes": [
+        "CWE-120"
+      ],
+      "description": "A bounds check is missing before memcpy in the HTTP parser.",
+      "language": "c",
+      "project": "minihttpd",
+      "references": [
+        {
+          "source": "project",
+          "tags": [
+            "patch"
+          ],
+          "url": "https://gitlab.com/example/minihttpd/-/commit/1234567890abcdef1234567890abcdef12345678"
+        },
+        {
+          "source": "project",
+          "tags": [
+            "issue"
+          ],
+          "url": "https://gitlab.com/example/minihttpd/-/issues/42"
+        }
+      ],
+      "repo_url": "https://gitlab.com/example/minihttpd"
+    }
+  ]
+}

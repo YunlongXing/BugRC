@@ -1,0 +1,60 @@
+[
+  {
+    "rank": 1,
+    "location": {
+      "file": "src/parser.c",
+      "line": 145,
+      "function": "parse_header"
+    },
+    "label": "root_cause_candidate",
+    "score": 0.91,
+    "explanation": "This upstream statement introduces a faulty size value later used by the trigger operation.",
+    "features": {
+      "distance_to_trigger": 6,
+      "distance_score": 1.0,
+      "defines_value_used_later": true,
+      "changes_object_state": true,
+      "affects_control_flow": false,
+      "matched_bug_pattern": "incorrect_size_computation",
+      "bug_pattern_score": 0.98,
+      "runtime_support_score": 0.7,
+      "supported_by_patch": true
+    }
+  },
+  {
+    "rank": 2,
+    "location": {
+      "file": "src/core.c",
+      "line": 218,
+      "function": "handle_msg"
+    },
+    "label": "propagation",
+    "score": 0.72,
+    "explanation": "This statement forwards the already-invalid size into the downstream handler.",
+    "features": {
+      "distance_to_trigger": 2,
+      "defines_value_used_later": true,
+      "changes_object_state": false,
+      "affects_control_flow": false,
+      "matched_bug_pattern": "none",
+      "runtime_support_score": 0.85
+    }
+  },
+  {
+    "rank": 3,
+    "location": {
+      "file": "src/foo.c",
+      "line": 312,
+      "function": "process_input"
+    },
+    "label": "symptom",
+    "score": 0.18,
+    "explanation": "This is the observable failure site rather than the earliest invalid-state origin.",
+    "features": {
+      "distance_to_trigger": 0,
+      "is_trigger_node": true,
+      "pure_use_site": true,
+      "runtime_support_score": 1.0
+    }
+  }
+]

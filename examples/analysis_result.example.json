@@ -1,0 +1,93 @@
+{
+  "bug_id": "libfoo_2026_001",
+  "trigger_point": {
+    "location": {
+      "file": "src/foo.c",
+      "line": 312,
+      "column": 9,
+      "function": "process_input"
+    },
+    "type": "asan_report",
+    "failing_operation": "memcpy",
+    "bug_type_hint": "buffer_overflow"
+  },
+  "root_cause_candidates": [
+    {
+      "rank": 1,
+      "location": {
+        "file": "src/parser.c",
+        "function": "parse_header",
+        "line": 145
+      },
+      "label": "root_cause_candidate",
+      "score": 0.91,
+      "features": {
+        "defines_tainted_size": true,
+        "distance_to_trigger": 6,
+        "matched_bug_pattern": "incorrect_length_computation",
+        "supported_by_patch": true
+      },
+      "explanation": "This statement computes a length field later used by memcpy size at the trigger point."
+    },
+    {
+      "rank": 2,
+      "location": {
+        "file": "src/core.c",
+        "function": "handle_msg",
+        "line": 218
+      },
+      "label": "propagation",
+      "score": 0.72,
+      "features": {
+        "passes_tainted_argument": true,
+        "distance_to_trigger": 2
+      },
+      "explanation": "This frame forwards the faulty length to the failing function."
+    }
+  ],
+  "chains": [
+    {
+      "rank": 1,
+      "root_cause_rank": 1,
+      "score": 0.89,
+      "steps": [
+        {
+          "location": {
+            "file": "src/parser.c",
+            "function": "parse_header",
+            "line": 145
+          },
+          "relation": "state_update",
+          "entity": "len",
+          "explanation": "An incorrect length is computed from unvalidated input."
+        },
+        {
+          "location": {
+            "file": "src/core.c",
+            "function": "handle_msg",
+            "line": 218
+          },
+          "relation": "call_argument",
+          "entity": "len",
+          "explanation": "The faulty length is passed into the downstream handler."
+        },
+        {
+          "location": {
+            "file": "src/foo.c",
+            "function": "process_input",
+            "line": 312
+          },
+          "relation": "data_flow",
+          "entity": "memcpy_size",
+          "explanation": "The same length is used as memcpy size, causing overflow."
+        }
+      ],
+      "summary": "Incorrect length computation in parse_header propagates through handle_msg and is used as memcpy size at the trigger point."
+    }
+  ],
+  "summary": "The most likely root cause is an incorrect size computation in parse_header that later reaches memcpy.",
+  "limitations": [
+    "Alias tracking is approximate.",
+    "Patch evidence is treated as weak supervision only."
+  ]
+}

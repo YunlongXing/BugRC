@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bugrc"
+version = "0.1.0"
+description = "BugRC: trigger-guided root cause analysis prototype for open-source bugs"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "BugRC Research Prototype" }
+]
+dependencies = [
+  "pydantic>=2.7,<3",
+]
+
+[project.scripts]
+bugrc = "bugrc.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

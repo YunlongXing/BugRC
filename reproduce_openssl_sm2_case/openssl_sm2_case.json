@@ -1,0 +1,28 @@
+{
+  "bug_id": "openssl_1_1_1k_sm2_decrypt_line355_user",
+  "repo_path": "openssl-sm2-mini",
+  "language": "c_cpp",
+  "title": "Potential overflow in OpenSSL sm2_decrypt",
+  "summary": "The XOR copy in sm2_decrypt may overflow when msg_len derived from the ciphertext exceeds the effective plaintext output capacity.",
+  "trigger_point": {
+    "location": {
+      "file": "crypto/sm2/sm2_crypt.c",
+      "line": 355,
+      "function": "sm2_decrypt"
+    },
+    "type": "first_failing_operation",
+    "failing_operation": "ptext_buf[i] = C2[i] ^ msg_mask[i]",
+    "bug_type_hint": "buffer_overflow"
+  },
+  "config": {
+    "enable_patch_analysis": false,
+    "enable_llm": false,
+    "top_k_candidates": 20,
+    "max_chain_paths": 10,
+    "parser_backend": "regex",
+    "bug_type_hint": "buffer_overflow",
+    "max_backward_depth": 12,
+    "max_interprocedural_hops": 6,
+    "confidence_threshold": 0.05
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "trigger": {
+    "location": {
+      "file": "src/foo.c",
+      "line": 312,
+      "function": "process_input"
+    },
+    "type": "asan_report",
+    "failing_operation": "memcpy"
+  },
+  "trigger_node_id": "stmt:src/foo.c:312:process_input",
+  "nodes": [
+    {
+      "node_id": "stmt:src/parser.c:145:parse_header",
+      "statement_id": "src/parser.c:145",
+      "function_id": "src/parser.c:parse_header:120",
+      "function_name": "parse_header",
+      "location": {
+        "file": "src/parser.c",
+        "line": 145,
+        "function": "parse_header"
+      },
+      "text": "len = read_u16(input);",
+      "statement_types": [
+        "assignment"
+      ],
+      "tracked_entities": [
+        "len"
+      ]
+    },
+    {
+      "node_id": "stmt:src/core.c:218:handle_msg",
+      "statement_id": "src/core.c:218",
+      "function_id": "src/core.c:handle_msg:200",
+      "function_name": "handle_msg",
+      "location": {
+        "file": "src/core.c",
+        "line": 218,
+        "function": "handle_msg"
+      },
+      "text": "process_input(buf, len);",
+      "statement_types": [
+        "function_call"
+      ],
+      "tracked_entities": [
+        "len"
+      ]
+    },
+    {
+      "node_id": "stmt:src/foo.c:312:process_input",
+      "statement_id": "src/foo.c:312",
+      "function_id": "src/foo.c:process_input:280",
+      "function_name": "process_input",
+      "location": {
+        "file": "src/foo.c",
+        "line": 312,
+        "function": "process_input"
+      },
+      "text": "memcpy(dst, src, len);",
+      "statement_types": [
+        "function_call",
+        "memory_operation"
+      ],
+      "tracked_entities": [
+        "len"
+      ],
+      "is_trigger": true
+    }
+  ],
+  "edges": [
+    {
+      "source_node_id": "stmt:src/parser.c:145:parse_header",
+      "target_node_id": "stmt:src/core.c:218:handle_msg",
+      "relation": "state_update",
+      "entity": "len",
+      "explanation": "len is defined here and later forwarded."
+    },
+    {
+      "source_node_id": "stmt:src/core.c:218:handle_msg",
+      "target_node_id": "stmt:src/foo.c:312:process_input",
+      "relation": "call_argument",
+      "entity": "len",
+      "explanation": "len is passed to the callee that reaches the trigger."
+    }
+  ],
+  "approximations": [
+    "Intraprocedural slicing uses statement order plus variable and syntax heuristics instead of full SSA/CFG dependence.",
+    "Interprocedural expansion uses name-based parameter and return matching."
+  ],
+  "diagnostics": []
+}

@@ -1,0 +1,59 @@
+{
+  "commit_message": "CVE-2024-3000 fix bounds check in copy_data",
+  "cve_id": "CVE-2024-3000",
+  "diagnostics": [],
+  "fix_commit_candidates": [
+    {
+      "commit_sha": "abcdefabcdefabcdefabcdefabcdefabcdefabcd",
+      "commit_url": "https://github.com/example/sample/commit/abcdefabcdefabcdefabcdefabcdefabcdefabcd",
+      "matched_by": [
+        "reference_commit"
+      ],
+      "score": 1.0,
+      "summary": "CVE-2024-3000 fix bounds check in copy_data"
+    }
+  ],
+  "modified_files": [
+    "src/sample.c"
+  ],
+  "patch_intent": "direct_fix",
+  "patch_type": "bounds_fix",
+  "patches": [
+    {
+      "after": "void copy_data(char *dst, const char *src, int len, int cap) {\n    if (len > cap) {\n        len = cap;\n    }\n    memcpy(dst, src, len);\n}",
+      "before": "void copy_data(char *dst, const char *src, int len, int cap) {\n    memcpy(dst, src, len);\n}",
+      "changed_functions": [
+        "copy_data"
+      ],
+      "file": "src/sample.c",
+      "hunks": [
+        {
+          "added_statements": [
+            "if (len > cap) {",
+            "len = cap;"
+          ],
+          "after": "void copy_data(char *dst, const char *src, int len, int cap) {\n    if (len > cap) {\n        len = cap;\n    }\n    memcpy(dst, src, len);\n}",
+          "before": "void copy_data(char *dst, const char *src, int len, int cap) {\n    memcpy(dst, src, len);\n}",
+          "function": "copy_data",
+          "header": " void copy_data(char *dst, const char *src, int len, int cap) {",
+          "hunk_index": 0,
+          "new_count": 6,
+          "new_start": 1,
+          "old_count": 3,
+          "old_start": 1,
+          "removed_statements": []
+        }
+      ]
+    }
+  ],
+  "repo_url": "https://github.com/example/sample",
+  "resolved_fix_commit": {
+    "commit_sha": "abcdefabcdefabcdefabcdefabcdefabcdefabcd",
+    "commit_url": "https://github.com/example/sample/commit/abcdefabcdefabcdefabcdefabcdefabcdefabcd",
+    "matched_by": [
+      "reference_commit"
+    ],
+    "score": 1.0,
+    "summary": "CVE-2024-3000 fix bounds check in copy_data"
+  }
+}

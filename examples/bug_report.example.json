@@ -1,0 +1,92 @@
+{
+  "bug_id": "libfoo_2026_001",
+  "repo_path": "/path/to/libfoo",
+  "language": "c_cpp",
+  "title": "Heap overflow in packet parser",
+  "summary": "A malformed packet causes an invalid size computation that later reaches memcpy.",
+  "build": {
+    "build_dir": "/path/to/libfoo/build",
+    "build_cmd": "cmake .. && make -j"
+  },
+  "run": {
+    "cmd": "./bin/foo_cli poc.bin",
+    "poc_path": "/path/to/poc.bin",
+    "env": {
+      "ASAN_OPTIONS": "halt_on_error=1"
+    }
+  },
+  "trigger_point": {
+    "location": {
+      "file": "src/foo.c",
+      "line": 312,
+      "column": 9,
+      "function": "process_input"
+    },
+    "type": "asan_report",
+    "failing_operation": "memcpy",
+    "bug_type_hint": "buffer_overflow",
+    "evidence": [
+      {
+        "kind": "sanitizer_report",
+        "path": "/path/to/asan.txt",
+        "line": 42,
+        "excerpt": "WRITE of size 256 at 0x..."
+      }
+    ]
+  },
+  "runtime_evidence": {
+    "sanitizer_report_path": "/path/to/asan.txt",
+    "stack_trace_path": "/path/to/stack.txt",
+    "poc_path": "/path/to/poc.bin",
+    "failure_summary": "heap-buffer-overflow in memcpy",
+    "failing_access": "write",
+    "trigger_frame_index": 0,
+    "stack_frames": [
+      {
+        "index": 0,
+        "function": "process_input",
+        "location": {
+          "file": "src/foo.c",
+          "line": 312,
+          "column": 9,
+          "function": "process_input"
+        },
+        "module": "foo_cli"
+      },
+      {
+        "index": 1,
+        "function": "handle_msg",
+        "location": {
+          "file": "src/core.c",
+          "line": 218,
+          "function": "handle_msg"
+        },
+        "module": "foo_cli"
+      }
+    ]
+  },
+  "patch_evidence": {
+    "fix_commit": "abc123",
+    "diff_path": "/path/to/fix.diff",
+    "issue_text_path": "/path/to/issue.txt",
+    "patch_intent": "direct_fix",
+    "changed_locations": [
+      {
+        "file": "src/parser.c",
+        "line": 145,
+        "function": "parse_header"
+      }
+    ]
+  },
+  "config": {
+    "enable_patch_analysis": true,
+    "enable_llm": false,
+    "top_k_candidates": 5,
+    "max_chain_paths": 5,
+    "parser_backend": "tree_sitter",
+    "bug_type_hint": "buffer_overflow",
+    "max_backward_depth": 12,
+    "max_interprocedural_hops": 6,
+    "confidence_threshold": 0.1
+  }
+}
